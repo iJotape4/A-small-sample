@@ -548,10 +548,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 374325027}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 62174060c07ba4140b8d150ce2bbcbd5, type: 3}
+  m_Script: {fileID: 11500000, guid: 1c97d60c8806a1c418f9806b135fa021, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   pickedItem: 0
+  magneticWeapon: {fileID: 11400000, guid: df312d87d47fa1c449762986b1e7fc23, type: 2}
 --- !u!1 &496831775
 GameObject:
   m_ObjectHideFlags: 0
@@ -3343,7 +3344,7 @@ GameObject:
   - component: {fileID: 3156280538543933097}
   - component: {fileID: 3156280538543933099}
   - component: {fileID: 3156280538543933100}
-  - component: {fileID: 3156280538543933101}
+  - component: {fileID: 3156280538543933102}
   m_Layer: 0
   m_Name: M1911
   m_TagString: Selectable
@@ -3430,7 +3431,7 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3156280538543933096}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &3156280538543933101
+--- !u!114 &3156280538543933102
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3439,10 +3440,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 3156280538543933096}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 62174060c07ba4140b8d150ce2bbcbd5, type: 3}
+  m_Script: {fileID: 11500000, guid: 9bcd6e96ecbfafe4f80c1ce418c03905, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   pickedItem: 0
+  parabolicWeapon: {fileID: 11400000, guid: 16ef5851ff3f5934186baea3a6cc3459, type: 2}
 --- !u!4 &3284121647461143956
 Transform:
   m_ObjectHideFlags: 0
@@ -7950,16 +7952,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 720060046674973394, guid: f689e5385c55d534fbdbc278bf7b7187,
-        type: 3}
-      propertyPath: defaultMaterial
-      value: 
-      objectReference: {fileID: 2100000, guid: 83a094dd462e058468b0431ede72457d, type: 2}
-    - target: {fileID: 720060046674973394, guid: f689e5385c55d534fbdbc278bf7b7187,
-        type: 3}
-      propertyPath: higLightMaterial
-      value: 
-      objectReference: {fileID: 2100000, guid: dcd4855187ba1be4fb702ce1df7c0381, type: 2}
     - target: {fileID: 9096806826534297897, guid: f689e5385c55d534fbdbc278bf7b7187,
         type: 3}
       propertyPath: speed
