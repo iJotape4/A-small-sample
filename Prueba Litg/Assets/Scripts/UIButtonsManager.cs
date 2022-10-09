@@ -25,6 +25,7 @@ public class UIButtonsManager : MonoBehaviour
     }
 
     public void onFourthButtonClick(){
-        SceneManager.LoadScene(scene2);
+        Destroy(GetComponentInParent<Transform>().parent.gameObject);
+        SceneManager.LoadSceneAsync(scene2, LoadSceneMode.Additive);
     }
 }
