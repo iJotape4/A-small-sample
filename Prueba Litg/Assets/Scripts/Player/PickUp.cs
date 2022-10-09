@@ -5,15 +5,22 @@ using UnityEngine;
 public class PickUp : MonoBehaviour
 {
     bool _interact;
+    [SerializeField] private Interactable pickedItem;
 
     [SerializeField] private string selectableTag = "Selectable";
     [SerializeField] private Material higLightMaterial;
     [SerializeField] private Material defaultMaterial;
 
     private Transform _selection;
-    public Camera _cam;
+    [SerializeField] private Camera _cam;
 
-    private void Update(){
+    private void Update()
+    {
+        PickItem();
+    }
+
+    public void PickItem()
+    {
         if(_selection!=null)
         {
             var selectionRenderer = _selection.GetComponent<Renderer>();
@@ -34,7 +41,13 @@ public class PickUp : MonoBehaviour
                 _selection = selection;
                 if(_interact)
                 {
-                    _selection.GetComponent<Interactable>().Interact(true);
+                    if(pickedItem!=null)
+                    {
+                        pickedItem.Interact(false);
+                    }
+
+                   pickedItem = _selection.GetComponent<Interactable>();
+                   pickedItem.Interact(true);
                 }
             }
         }
