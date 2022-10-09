@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 9096806826534297897}
   - component: {fileID: 9096806826534297903}
   - component: {fileID: 9096806826534297902}
+  - component: {fileID: 720060046674973394}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -87,6 +88,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movement: {fileID: 0}
   mouseLook: {fileID: 0}
+  pickUp: {fileID: 0}
 --- !u!114 &9096806826534297902
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -103,6 +105,22 @@ MonoBehaviour:
   sensivityY: 0.5
   playerCamera: {fileID: 0}
   xClamp: 85
+--- !u!114 &720060046674973394
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9096806826534297909}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2357481ae07a1414d977eac4d92cc730, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  selectableTag: Selectable
+  higLightMaterial: {fileID: 0}
+  defaultMaterial: {fileID: 0}
+  _cam: {fileID: 9096806826730525826}
 --- !u!1 &9096806826730525836
 GameObject:
   m_ObjectHideFlags: 0
