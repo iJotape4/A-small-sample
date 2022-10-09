@@ -6,6 +6,7 @@ public class PickUp : MonoBehaviour
 {
     bool _interact;
     [SerializeField] private Interactable pickedItem;
+    public PlayerWeaponsManagerScriptableObject weaponsManager;
 
     [SerializeField] private string selectableTag = "Selectable";
     [SerializeField] private Material higLightMaterial;
@@ -48,6 +49,7 @@ public class PickUp : MonoBehaviour
 
                    pickedItem = _selection.GetComponent<Interactable>();
                    pickedItem.Interact(true);
+                   weaponsManager.ChangePlayerWeapon(pickedItem.name);
                 }
             }
         }

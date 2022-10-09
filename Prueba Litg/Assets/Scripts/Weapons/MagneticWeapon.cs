@@ -6,4 +6,7 @@ public class MagneticWeapon : Interactable
 {
     public WeaponForceFieldScriptableObject magneticWeapon;
 
+    private void Start() {
+        name=magneticWeapon.name;
+    }
 }

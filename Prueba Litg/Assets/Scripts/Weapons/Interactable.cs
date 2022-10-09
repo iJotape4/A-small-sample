@@ -6,7 +6,7 @@ using UnityEngine.Events;
 public class Interactable : MonoBehaviour
 {
     public bool pickedItem;
-
+    public new string name;
     public void Interact(bool picked){
         
         foreach(MeshRenderer mr in  gameObject.GetComponentsInChildren<MeshRenderer>())
