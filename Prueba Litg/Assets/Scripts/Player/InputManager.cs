@@ -58,7 +58,7 @@ public class InputManager : MonoBehaviour
         movement.ReceiveInput(horizontalInput);
         mouseLook.ReceiveInput(mouseInput);
 
-        interact = groundMovement.Interact.IsPressed();
+        interact = groundMovement.Interact.WasReleasedThisFrame();
         shoot = groundMovement.Fire.WasReleasedThisFrame();
         holdShoot = groundMovement.Fire.IsPressed();
 

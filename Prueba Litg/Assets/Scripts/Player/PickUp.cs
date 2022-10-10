@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PickUp : MonoBehaviour
 {
@@ -15,6 +16,8 @@ public class PickUp : MonoBehaviour
     private Transform _selection;
     [SerializeField] private Camera _cam;
 
+    [SerializeField] Image eInteract;
+
     private void Update()
     {
         PickItem();
@@ -26,6 +29,7 @@ public class PickUp : MonoBehaviour
         {
             var selectionRenderer = _selection.GetComponent<Renderer>();
             selectionRenderer.material = defaultMaterial;
+            eInteract.enabled =false;
             _selection = null;           
         }
         var ray = _cam.ScreenPointToRay(Input.mousePosition);
@@ -38,6 +42,7 @@ public class PickUp : MonoBehaviour
                 if(selectionRenderer != null)
                 {
                     selectionRenderer.material = higLightMaterial;
+                    eInteract.enabled=true;
                 }
                 _selection = selection;
                 if(_interact)
