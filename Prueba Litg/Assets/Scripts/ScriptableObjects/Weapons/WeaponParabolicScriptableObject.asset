@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: WeaponParabolicScriptableObject
   m_EditorClassIdentifier: 
   name: ParabolicWeapon
-  force: 10
-  angle: 20
+  force: 20
+  angle: 10

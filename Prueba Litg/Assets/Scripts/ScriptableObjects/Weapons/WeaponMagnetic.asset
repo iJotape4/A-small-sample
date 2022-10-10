@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2360a44254c1b874bbe2b8c62353b75e, type: 3}
   m_Name: WeaponMagnetic
   m_EditorClassIdentifier: 
-  magneticForce: 20
+  name: MagneticWeapon
+  magneticForce: 15
   range: 20

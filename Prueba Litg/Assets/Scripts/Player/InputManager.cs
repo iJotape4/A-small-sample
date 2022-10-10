@@ -19,6 +19,7 @@ public class InputManager : MonoBehaviour
     Vector2 mouseInput;
     bool interact;
     bool shoot;
+    bool holdShoot;
 
     private void Awake()
     {
@@ -59,9 +60,10 @@ public class InputManager : MonoBehaviour
 
         interact = groundMovement.Interact.IsPressed();
         shoot = groundMovement.Fire.WasReleasedThisFrame();
+        holdShoot = groundMovement.Fire.IsPressed();
 
         pickUp.ReceiveInput(interact);
-        fire.ReceiveInput(shoot);
+        fire.ReceiveInput(shoot, holdShoot);
 
     }
 }

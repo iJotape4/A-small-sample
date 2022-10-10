@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 3579529082235991100}
   - component: {fileID: 3579529082235991096}
   - component: {fileID: 3579529082235991097}
+  - component: {fileID: 929961782084342630}
   m_Layer: 0
   m_Name: Ball
   m_TagString: Untagged
@@ -129,3 +130,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ballSpeed: 10
   angle: 30
+--- !u!114 &929961782084342630
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3579529082235991103}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6002b61bc4e32b245aa4f3c341b557af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  magneticGun: {fileID: 0}
+  magneticScriptableObject: {fileID: 11400000, guid: df312d87d47fa1c449762986b1e7fc23,
+    type: 2}
+  _attractionForce: 5
