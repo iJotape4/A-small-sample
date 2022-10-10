@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: WeaponBoomerangScriptableObject
   m_EditorClassIdentifier: 
   name: BoomerangWeapon
-  ShotForce: 20
-  range: 10
+  ShotForce: 800
+  range: 1

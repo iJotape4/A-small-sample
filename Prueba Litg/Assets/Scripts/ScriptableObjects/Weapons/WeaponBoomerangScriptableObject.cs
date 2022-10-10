@@ -20,7 +20,7 @@ public class WeaponBoomerangScriptableObject : ScriptableObject
         }
     }
 
-    public void MagnetizeObjects()
+    public void LaunchBoomerang()
     {
         LaunchBoomerangEvent.Invoke(ShotForce);
     }

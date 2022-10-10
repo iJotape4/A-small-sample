@@ -9,10 +9,12 @@ public class PlayerWeaponsManagerScriptableObject : ScriptableObject
 {
     public string magneticWeapon = "MagneticWeapon";
     public string parabolicWeapon = "ParabolicWeapon";
+    public string boomerangWeapon = "BoomerangWeapon";
     public string currentWeapon;
 
     public WeaponParabolicScriptableObject parabolicScriptableObject;
     public WeaponForceFieldScriptableObject forceFieldScriptableObject;
+      public WeaponBoomerangScriptableObject weaponBoomerangScriptableObject;
     public ScriptableObject currentWeaponScriptableObject;
 
     [System.NonSerialized]
@@ -36,6 +38,9 @@ public class PlayerWeaponsManagerScriptableObject : ScriptableObject
         else if (weapon == magneticWeapon)
         {
             currentWeaponScriptableObject = forceFieldScriptableObject;
+        }else if( weapon == boomerangWeapon)
+        {
+            currentWeaponScriptableObject = weaponBoomerangScriptableObject;
         }
 
         weaponChangeEvent.Invoke(currentWeapon);

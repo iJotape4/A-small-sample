@@ -2058,8 +2058,9 @@ GameObject:
   - component: {fileID: 8092518248043385042}
   - component: {fileID: 7568634568762122836}
   - component: {fileID: 4192920192453497255}
+  - component: {fileID: 4366693639019313139}
   m_Layer: 0
-  m_Name: V-Shape2
+  m_Name: BoomerangWeapon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2072,13 +2073,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2622977414268909878}
-  m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
-  m_LocalPosition: {x: 9.617, y: -0.262, z: -1.71}
-  m_LocalScale: {x: 72.03722, y: 32.756535, z: 27.610743}
+  m_LocalRotation: {x: 0.6514373, y: -0.6449145, z: -0.038139697, w: 0.39781922}
+  m_LocalPosition: {x: -0.18815207, y: 0.0141406655, z: -0.40447807}
+  m_LocalScale: {x: 72.037224, y: 32.756535, z: 27.610743}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 5198083120876351043}
-  m_RootOrder: 0
+  m_Father: {fileID: 5197277987919084792}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &7568634568762122836
 MeshFilter:
@@ -2131,6 +2132,22 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!54 &4366693639019313139
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2622977414268909878}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1 &2626815415793247899
 GameObject:
   m_ObjectHideFlags: 0
@@ -3225,7 +3242,7 @@ Transform:
   m_Children:
   - {fileID: 8082858285136087853}
   - {fileID: 5826561420516496534}
-  - {fileID: 5198083120876351043}
+  - {fileID: 8092518248043385042}
   m_Father: {fileID: 9096806826730525825}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3951,55 +3968,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!1 &6385244259665775786
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 5198083120876351043}
-  - component: {fileID: 8314916400527296755}
-  m_Layer: 0
-  m_Name: BoomerangWeapon
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &5198083120876351043
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6385244259665775786}
-  m_LocalRotation: {x: 0.7419364, y: -0.48299226, z: 0.42905468, w: -0.17933503}
-  m_LocalPosition: {x: -0.54, y: 8.01, z: -6.01}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 8092518248043385042}
-  m_Father: {fileID: 5197277987919084792}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 8.531, y: -234.981, z: -118.318}
---- !u!54 &8314916400527296755
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6385244259665775786}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!1 &6430017736114149035
 GameObject:
   m_ObjectHideFlags: 0
@@ -7146,12 +7114,14 @@ MonoBehaviour:
   ballPrefab: {fileID: 3579529082235991103, guid: 3da5e0d1c229cfc4188e84f9fbd02051,
     type: 3}
   MagneticVFX: {fileID: 6005764818525445880}
+  boomerang: {fileID: 0}
   gunTransform: {fileID: 7960899882802539448}
   weaponsManager: {fileID: 11400000, guid: 76010e61427394a43a690af0469419ca, type: 2}
   parabolicScriptableObject: {fileID: 11400000, guid: 16ef5851ff3f5934186baea3a6cc3459,
     type: 2}
   forceFieldScriptableObject: {fileID: 11400000, guid: df312d87d47fa1c449762986b1e7fc23,
     type: 2}
+  boomerangScriptableObject: {fileID: 0}
 --- !u!1 &9096806826730525836
 GameObject:
   m_ObjectHideFlags: 0
