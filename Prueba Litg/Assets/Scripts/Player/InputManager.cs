@@ -5,23 +5,27 @@ using UnityEngine;
 [RequireComponent(typeof(Movement))]
 [RequireComponent(typeof(MouseLook))]
 [RequireComponent(typeof(PickUp))]
+[RequireComponent(typeof(Fire))]
 public class InputManager : MonoBehaviour
 {
     [SerializeField] Movement movement;
     [SerializeField] MouseLook mouseLook;
     [SerializeField] PickUp pickUp;
+    [SerializeField] Fire fire;
     PlayerControls controls;
     PlayerControls.MovementActions groundMovement;
 
     Vector2 horizontalInput;
     Vector2 mouseInput;
     bool interact;
+    bool shoot;
 
     private void Awake()
     {
         movement=GetComponent<Movement>();
         mouseLook=GetComponent<MouseLook>();
         pickUp = GetComponent<PickUp>();
+        fire = GetComponent<Fire>();
 
         controls = new PlayerControls();
         groundMovement = controls.Movement;
@@ -52,8 +56,12 @@ public class InputManager : MonoBehaviour
     {
         movement.ReceiveInput(horizontalInput);
         mouseLook.ReceiveInput(mouseInput);
-        
+
         interact = groundMovement.Interact.IsPressed();
+        shoot = groundMovement.Fire.WasReleasedThisFrame();
+
         pickUp.ReceiveInput(interact);
+        fire.ReceiveInput(shoot);
+
     }
 }

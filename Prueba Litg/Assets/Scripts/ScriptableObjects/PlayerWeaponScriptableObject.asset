@@ -12,4 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d165b3a4ce517224e8d8f54e9613a4a6, type: 3}
   m_Name: PlayerWeaponScriptableObject
   m_EditorClassIdentifier: 
+  magneticWeapon: MagneticWeapon
+  parabolicWeapon: ParabolicWeapon
   currentWeapon: 
+  magneticWeaponPath: Assets/Scripts/ScriptableObjects/WeaponsWeaponParabolicScriptableObject.asset
+  parabolicWeaponPath: Assets/Scripts/ScriptableObjects/WeaponsWeaponMagnetic.asset
+  parabolicScriptableObject: {fileID: 11400000, guid: 16ef5851ff3f5934186baea3a6cc3459,
+    type: 2}
+  forceFieldScriptableObject: {fileID: 11400000, guid: df312d87d47fa1c449762986b1e7fc23,
+    type: 2}
+  currentWeaponScriptableObject: {fileID: 0}

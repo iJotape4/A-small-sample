@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8168df7b64b7aa41b35359d623331fe, type: 3}
   m_Name: WeaponParabolicScriptableObject
   m_EditorClassIdentifier: 
-  force: 20
-  angle: 45
+  name: ParabolicWeapon
+  force: 10
+  angle: 20
